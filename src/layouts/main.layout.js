@@ -15,7 +15,7 @@ class MainLayout extends Component {
     return (
       <div>
         <Header as="h2" icon textAlign="left" style={{backgroundColor: 'red'}}>
-          <Icon name="users" circular />
+          <Icon name="users" c circular />
           <Header.Content>Friends</Header.Content>
         </Header>
         <Grid columns={2}>

@@ -12,7 +12,7 @@ import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 import reducer from './store/reducers';
-import App from './App.1';
+import App from './App';
 // import Routes from './Routes';
 
 const store = createStore(reducer, {}, composeWithDevTools(applyMiddleware(thunk)));
