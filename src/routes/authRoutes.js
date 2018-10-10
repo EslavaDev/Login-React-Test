@@ -8,7 +8,7 @@ export const isAuthenticated = () => {
   try {
     isValid = decode(token);
   } catch (error) {
-    return false;
+    return true;
   }
   return isValid;
 };
