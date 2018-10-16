@@ -1,0 +1,8 @@
+body, #root{
+    background: rgba(164, 7, 255, 0.089);
+    height: 100vh;
+}
+h3{
+    color:#999;
+    text-align: center;
+}

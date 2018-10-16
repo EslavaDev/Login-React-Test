@@ -8,8 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css';
-import './index.css';
-
+import './main.css';
 import * as serviceWorker from './serviceWorker';
 import reducer from './store/reducers';
 import App from './App';

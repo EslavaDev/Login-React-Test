@@ -7,16 +7,17 @@ import { isAuthenticated } from './routes/authRoutes';
 import './App.css';
 
 const App = () => (
-  <div className="App">
+  <div className="container">
     {
-    (isAuthenticated()) && (
+    (isAuthenticated()) ? (
       <div>
         <Header as="h1" textAlign="left" style={{ backgroundColor: 'red' }}>
           <Icon name="users" circular />
           <Header.Content>Friends</Header.Content>
         </Header>
       </div>
-    )}
+    ) :''
+  }
 
     {
       routes.map(route => (

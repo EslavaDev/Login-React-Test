@@ -1,11 +1,12 @@
 import { NoLogin, withAuthentication } from './authRoutes';
 import LazyLoad from './laziLoad';
-import Login from '../views/Login';
+import Login from '../views/NoAuth/Container';
+import ErrorComponent from '../views/Error/containers'
 
-export default [
+const Rutas = [
   {
     path: '/login',
-    component: NoLogin(LazyLoad(()=> import('../views/Login'))),
+    component: NoLogin(Login),
     exact: true,
   },
   {
@@ -14,3 +15,5 @@ export default [
     exact: true,
   },
 ];
+
+export default Rutas;
