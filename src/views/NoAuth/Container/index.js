@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component }  from 'react';
+import { Redirect, Route, Link } from 'react-router-dom';
 import {Grid, Card, Responsive} from 'semantic-ui-react';
 import SignIn from '../Components/login';
 import SignUp from '../Components/register';
@@ -57,7 +58,25 @@ export default class ContainerPureNoAuth extends Component {
     }
 
     handleSubmitLogin = (ev) => {
-        console.log(this.state.args)
+        const {email, password} = this.state.args;
+        console.log(email, password)
+        return fetch('https://peerpeel.herokuapp.com/v1/login/client',{
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email,
+                password,
+            })
+        })
+        .then(res => res.json())
+        .then(json =>{
+            localStorage.setItem('token', json.token);
+            return window.location.reload();
+        })
+        .catch(err => console.error(err));
     }
   render() {
       const { visible } = this.state;

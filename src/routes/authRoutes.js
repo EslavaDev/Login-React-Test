@@ -13,11 +13,6 @@ export const isAuthenticated = () => {
   return isValid;
 };
 
-export const Private = props => (
-  isAuthenticated()
-    ? <Route {...props} />
-    : <Redirect to="/login" />
-);
 export const withAuthentication = (WrappedComponent) => {
   const WithAuthentication = (props) => {
     if (!isAuthenticated()) {

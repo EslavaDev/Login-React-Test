@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -17,9 +17,9 @@ import App from './App';
 const store = createStore(reducer, {}, composeWithDevTools(applyMiddleware(thunk)));
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={createHistory}>
+    <BrowserRouter history={createHistory}>
       <App />
-    </Router>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root'),
 );

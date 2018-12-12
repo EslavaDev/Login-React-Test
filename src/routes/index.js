@@ -2,6 +2,7 @@ import { NoLogin, withAuthentication } from './authRoutes';
 import LazyLoad from './laziLoad';
 import Login from '../views/NoAuth/Container';
 import ErrorComponent from '../views/Error/containers'
+import Error from '../views/Error/containers';
 
 const Rutas = [
   {
@@ -11,7 +12,7 @@ const Rutas = [
   },
   {
     path: '/',
-    component: withAuthentication(LazyLoad(()=> import('../views/prueba'))),
+    component: withAuthentication(LazyLoad(()=> import('../views/Home/container'))),
     exact: true,
   },
 ];
