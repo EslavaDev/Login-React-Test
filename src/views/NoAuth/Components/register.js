@@ -1,6 +1,7 @@
 import React from 'react';
 import {Divider, Form, Button, Icon} from 'semantic-ui-react';
 import Box from './box';
+import '../noAuth.css';
 const Register = (props) => {
   return (
 <div>
@@ -29,7 +30,7 @@ const Register = (props) => {
         <h3>Al registrarte, aceptas nuestras Condiciones, la Política de datos y la Política de cookies.</h3>
       </Box>
       <Box>
-      <p>¿Tienes una cuenta? <a href="" onClick={props.handleClick}>Inicia Sesión</a></p> 
+      <p>¿Tienes una cuenta? <button className="button" onClick={props.handleClick}>Inicia Sesión</button></p> 
       </Box>
     </div>
   )

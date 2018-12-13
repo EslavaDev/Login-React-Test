@@ -6,7 +6,7 @@ const Login = ({handleClick, handleChange, handleSubmit}) => {
   return (
     <div>
       <Box>
-          <img src='images/LogoColor.png' />
+          <img src='images/LogoColor.png ' alt="logo" />
           <Form onSubmit={(ev) => handleSubmit(ev)}>
               <Form.Field>
                   <Form.Input name='email' onChange={handleChange} placeholder='Teléfono, Email o Nombre de usuario'icon={<Icon color='green' size='large' name="check circle outline"/>}/>
@@ -22,7 +22,7 @@ const Login = ({handleClick, handleChange, handleSubmit}) => {
           </Form>
       </Box>
       <Box>
-          <p>¿No tienes una cuenta? <a href="" onClick={handleClick}>Registrate</a></p> 
+          <p>¿No tienes una cuenta? <button onClick={handleClick}>Registrate</button></p> 
       </Box>
     </div>
   )

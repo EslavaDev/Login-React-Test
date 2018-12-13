@@ -8,7 +8,7 @@ import './App.css';
 import Error from './views/Error/containers';
 
 const App = () => (
-  <div>
+  <div >
 
     {
       (isAuthenticated()) ? (
@@ -19,7 +19,7 @@ const App = () => (
         
         ) :''
       }
-  
+  <div className="container">
   <Switch >
     {
       routes.map(route => (
@@ -29,6 +29,7 @@ const App = () => (
    
       <Route component={Error} />
       </Switch>
+      </div>
       </div>
 );
 

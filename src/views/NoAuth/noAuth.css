@@ -3,3 +3,11 @@ img{
     height: 100%;
     margin-bottom: 10%;
 }
+
+button{
+    border: none;
+    background-color: white;
+    border-color: white;
+    border-bottom-color: white;
+    color: #1E70BF
+}
